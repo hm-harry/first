@@ -93,6 +93,42 @@ frontend 同理。
 | 接口契约 | **OpenAPI / springdoc-openapi** | 后端生成 schema，前端用 `openapi-typescript` 生成 TS 类型，弥补跨语言上下文 |
 | 数据库 | Postgres | OLTP + JSON 兼容 |
 
+### 锁定栈版本验证
+
+> 以下为基于 `frontend/package.json` 和 `backend/pom.xml` 的实际依赖检查结果。
+
+#### 前端（`frontend/package.json`）
+
+| 依赖 | 锁定版本 | 实际安装版本 | 状态 |
+|---|---|---|---|
+| React | 19 | `19.2.4` | ✅ 已安装 |
+| Next.js (App Router) | 16 | `16.2.10` | ✅ 已安装 |
+| TypeScript | 5 | `^5` | ✅ 已安装 |
+| Tailwind CSS | 4 | `^4` | ✅ 已安装 |
+| shadcn/ui | base-nova / neutral | `^4.13.0` | ✅ 已安装 |
+| lucide-react | — | `^1.24.0` | ✅ 已安装 |
+| Zustand | — | `^5.0.14` | ✅ 已安装 |
+| Vitest | — | `^4.1.10` | ✅ 已安装 |
+| @testing-library/react | — | `^16.3.2` | ✅ 已安装 |
+
+#### 后端（`backend/pom.xml`）
+
+| 依赖 | 锁定版本 | 实际安装版本 | 状态 |
+|---|---|---|---|
+| Spring Boot | 3.3.x | `3.3.5` (parent) | ✅ 已安装 |
+| Java | 17 | `java.version=17` | ✅ 已配置 |
+| spring-boot-starter-web | — | 继承 parent | ✅ 已安装 |
+| spring-boot-starter-data-jpa | — | 继承 parent | ✅ 已安装 |
+| spring-boot-starter-validation | — | 继承 parent | ✅ 已安装 |
+| H2 (dev) | — | 继承 parent | ✅ 已安装 |
+| spring-boot-starter-test | — | 继承 parent | ✅ 已安装 |
+| **springdoc-openapi** | 2.x（兼容 SB 3.3） | `2.6.0` | ✅ 已安装 |
+| **openapi-typescript**（前端） | 锁定栈要求 | `7.13.0` | ✅ 已安装 |
+
+#### 待补齐项
+
+- ✅ **springdoc-openapi**：已通过 `openapi-integration` change 完成。后端 `springdoc-openapi-starter-webmvc-ui:2.6.0` 已集成，前端 `openapi-typescript:7.13.0` 已安装并配置 `generate:api` 脚本。
+
 ### 禁止动作（除非走 propose 流程推翻）
 
 - ❌ 把后端切到 Next.js API Routes / Server Actions（仅适用于短周期 MVP，不适用本项目长期场景）
