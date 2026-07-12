@@ -1,6 +1,6 @@
 # homepage-ai-launcher Spec
 
-> 路径：`openspec/specs/homepage/homepage-ai-launcher.md`
+> 路径：`openspec/specs/homepage-ai-launcher/spec.md`
 > 承接挂载位：`homepage-shell` 在 `app/layout.tsx` 内 `{children}` 之后提供的 `data-region="ai-launcher"` 槽位
 > 实现位置：`frontend/app/regions/AiLauncherSlot.tsx`（替换骨架阶段的空 div）
 > 范围：**仅 UI 入口**，不接真实对话能力

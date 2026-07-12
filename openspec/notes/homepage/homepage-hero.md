@@ -1,6 +1,6 @@
 # homepage-hero Spec
 
-> 路径：`openspec/specs/homepage/homepage-hero.md`
+> 路径：`openspec/specs/homepage-hero/spec.md`
 > 承接挂载位：`homepage-shell` 在 `app/page.tsx` 第 1 个 region 提供的 `data-region="hero"` 槽位
 > 实现位置：`frontend/app/regions/HeroSlot.tsx`（替换 shell 阶段的空 Slot）
 

@@ -1,6 +1,6 @@
 # frontend-styling-stack Spec
 
-> 路径：`openspec/specs/homepage/frontend-styling-stack.md`
+> 路径：`openspec/specs/frontend-styling-stack/spec.md`
 > 实现位置：`frontend/`（npm 依赖 + 配置文件 + `lib/utils.ts` + `components/ui/`）
 > 角色：6 个区块单元（hero / feature-nav / city-grid / hot-posts / hot-spots / ai-launcher）的**共享前置**；与 `homepage-shell` 并列、互不依赖
 > 性质：**工具链/能力引入型**变更，不含业务 UI

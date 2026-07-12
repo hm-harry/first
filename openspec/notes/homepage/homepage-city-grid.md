@@ -1,6 +1,6 @@
 # homepage-city-grid Spec
 
-> 路径：`openspec/specs/homepage/homepage-city-grid.md`
+> 路径：`openspec/specs/homepage-city-grid/spec.md`
 > 承接挂载位：`homepage-shell` 在 `app/page.tsx` 第 3 个 region 提供的 `data-region="city-grid"` 槽位
 > 实现位置：`frontend/app/regions/CityGridSlot.tsx`
 

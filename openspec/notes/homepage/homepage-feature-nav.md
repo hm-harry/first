@@ -1,6 +1,6 @@
 # homepage-feature-nav Spec
 
-> 路径：`openspec/specs/homepage/homepage-feature-nav.md`
+> 路径：`openspec/specs/homepage-feature-nav/spec.md`
 > 承接挂载位：`homepage-shell` 在 `app/page.tsx` 第 2 个 region 提供的 `data-region="feature-nav"` 槽位
 > 实现位置：`frontend/app/regions/FeatureNavSlot.tsx`
 

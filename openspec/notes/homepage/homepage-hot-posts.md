@@ -1,6 +1,6 @@
 # homepage-hot-posts Spec
 
-> 路径：`openspec/specs/homepage/homepage-hot-posts.md`
+> 路径：`openspec/specs/homepage-hot-posts/spec.md`
 > 承接挂载位：`homepage-shell` 在 `app/page.tsx` 第 4 个 region 提供的 `data-region="hot-posts"` 槽位
 > 实现位置：`frontend/app/regions/HotPostsSlot.tsx`
 > 数据：本期 mock，TS 类型同时作为后续 `api-hot-posts` 单元的契约占位

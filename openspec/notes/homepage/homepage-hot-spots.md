@@ -1,6 +1,6 @@
 # homepage-hot-spots Spec
 
-> 路径：`openspec/specs/homepage/homepage-hot-spots.md`
+> 路径：`openspec/specs/homepage-hot-spots/spec.md`
 > 承接挂载位：`homepage-shell` 在 `app/page.tsx` 第 5 个 region 提供的 `data-region="hot-spots"` 槽位
 > 实现位置：`frontend/app/regions/HotSpotsSlot.tsx`
 > 数据：本期 mock，TS 类型同时作为后续 `api-hot-spots` 单元的契约占位

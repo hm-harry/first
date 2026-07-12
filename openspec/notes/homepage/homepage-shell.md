@@ -1,6 +1,6 @@
 # homepage-shell Spec
 
-> 路径：`openspec/specs/homepage/homepage-shell.md`
+> 路径：`openspec/specs/homepage-shell/spec.md`
 > 实现位置：`frontend/app/page.tsx` + `frontend/app/layout.tsx` + `frontend/app/regions/*Slot.tsx`
 > 角色：所有其它 6 个区块单元的**前置底座**
 
