@@ -1,0 +1,61 @@
+# ===== Java =====
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ===== Node.js =====
+node_modules/
+dist/
+build/
+.npm
+*.tsbuildinfo
+
+# ===== IDE =====
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===== Environment =====
+.env
+.env.local
+.env.*.local
+*.pem
+
+# ===== Logs =====
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ===== OpenSpec =====
+openspec/changes/archive/
+
+# ===== Database =====
+*.sql.bak

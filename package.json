@@ -1,0 +1,15 @@
+{
+  "name": "first-main",
+  "version": "1.0.0",
+  "description": "AI Coding project with Harness + OpenSpec + Superpowers architecture",
+  "private": true,
+  "scripts": {
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev:backend": "cd backend && mvn spring-boot:run",
+    "build": "pnpm --filter frontend build && cd backend && mvn clean package",
+    "test": "pnpm --filter frontend test && cd backend && mvn test",
+    "lint": "pnpm --filter frontend lint"
+  },
+  "keywords": ["harness", "openspec", "superpowers", "ai-coding"],
+  "license": "MIT"
+}

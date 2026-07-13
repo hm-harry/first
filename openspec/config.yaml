@@ -1,0 +1,57 @@
+# OpenSpec 项目配置 — first-main
+# 参考: https://github.com/Fission-AI/OpenSpec
+
+project:
+  name: first-main
+  description: AI Coding project with Harness + OpenSpec + Superpowers architecture
+  version: 1.0.0
+
+# 技术栈声明
+tech_stack:
+  backend:
+    framework: Spring Boot 3.3
+    language: Java 17
+    build_tool: Maven
+    test_framework: JUnit 5 + Mockito
+  frontend:
+    framework: React 19
+    runtime: Next.js 16
+    language: TypeScript 5.x
+    package_manager: pnpm
+    test_framework: Vitest + React Testing Library
+  api_contract:
+    spec: OpenAPI 3.1
+    backend_tool: Springdoc-openapi 2.x
+    frontend_codegen: openapi-typescript
+  database:
+    engine: MySQL 8
+    orm: Spring Data JPA / Hibernate
+
+# OpenSpec 配置
+openspec:
+  # 规格文件目录
+  specs_dir: specs
+  # 变更提案目录
+  changes_dir: changes
+  # 归档目录
+  archive_dir: changes/archive
+
+# 工作流配置
+workflow:
+  # 默认 profile: core (explore, propose, apply, sync, archive)
+  profile: core
+  # Artifact DAG 流程
+  artifacts:
+    - proposal    # 为什么做、做什么
+    - specs       # Delta specs: 新增/修改/删除的需求
+    - design      # 怎么做：技术方案
+    - tasks       # 实现清单
+
+# AI Agent 集成
+agent:
+  # 在写代码前必须检查的目录
+  pre_code_checks:
+    - skills/
+    - openspec/specs/
+    - openspec/changes/
+    - rules/
