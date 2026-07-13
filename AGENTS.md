@@ -1,8 +1,54 @@
-# AI Agent 行为规范 — first-main
+# AI Agent 行为规范 — first-main (AIWorkSpace)
 
 ## 项目概述
 
-**first-main** 是一个全栈 AI Coding 项目，采用 **Harness + OpenSpec + Superpowers** 三层架构理念开发。
+**first-main** 是一个 **AIWorkSpace**（AI 工作空间），作为全栈项目的顶层容器，采用 **Harness + OpenSpec + Superpowers** 三层架构理念，通过 **Git Submodule** 管理前后端子仓库。
+
+## 仓库结构
+
+本项目是一个 Monorepo 工作空间，前后端作为独立 Git Submodule 引入：
+
+| 子模块 | 路径 | 远程仓库 | 说明 |
+|---------|------|---------|------|
+| backend | `backend/` | [first_backend](https://github.com/hm-harry/first_backend) | Spring Boot 3.3 + Java 17 后端服务 |
+| frontend | `frontend/` | [first_frontend](https://github.com/hm-harry/first_frontend) | React 19 + Next.js 16 + TypeScript 前端应用 |
+
+### Submodule 操作指南
+
+```bash
+# 初次克隆后初始化子模块
+git submodule update --init --recursive
+
+# 更新子模块到最新提交
+git submodule update --remote
+
+# 查看子模块状态
+git submodule status
+
+# 进入子模块目录进行开发
+cd backend   # 后端开发
+cd frontend  # 前端开发
+```
+
+### 后端 (backend/)
+
+- **仓库**: https://github.com/hm-harry/first_backend.git
+- **技术栈**: Spring Boot 3.3 + Java 17 + MySQL 8
+- **构建工具**: Maven
+- **测试框架**: JUnit 5 + Mockito
+- **API 文档**: Springdoc-openapi (Swagger UI: `http://localhost:8080/swagger-ui.html`)
+- **启动命令**: `cd backend && mvn spring-boot:run`
+- **测试命令**: `cd backend && mvn test`
+
+### 前端 (frontend/)
+
+- **仓库**: https://github.com/hm-harry/first_frontend.git
+- **技术栈**: React 19 + Next.js 16 + TypeScript 5.x
+- **包管理器**: pnpm
+- **测试框架**: Vitest + React Testing Library
+- **启动命令**: `cd frontend && pnpm install && pnpm dev`
+- **测试命令**: `cd frontend && pnpm test`
+- **构建命令**: `cd frontend && pnpm build`
 
 ## 技术栈
 
@@ -62,17 +108,18 @@
 ## 目录结构说明
 
 ```
-first-main/
-├── AGENTS.md           # 本文件：AI Agent 行为规范
-├── .cursorrules        # Cursor AI 专用规则
-├── rules/              # 自定义规则（代码风格、测试规范等）
-├── openspec/           # OpenSpec 规格驱动开发
-│   ├── config.yaml     # 项目配置
-│   ├── specs/          # 系统规格真相源
-│   └── changes/        # 变更提案
-├── skills/             # Superpowers 可组合 AI 技能
-├── backend/            # Spring Boot 后端 (Java 17)
-└── frontend/           # React 19 + Next.js 16 前端
+first-main/                          # AIWorkSpace 根目录
+├── .gitmodules             # Git Submodule 配置
+├── AGENTS.md               # 本文件：AI Agent 行为规范
+├── .cursorrules            # Cursor AI 专用规则
+├── rules/                  # 自定义规则（代码风格、测试规范等）
+├── openspec/               # OpenSpec 规格驱动开发
+│   ├── config.yaml         # 项目配置
+│   ├── specs/              # 系统规格真相源
+│   └── changes/            # 变更提案
+├── skills/                 # Superpowers 可组合 AI 技能
+├── backend/                # [submodule] Spring Boot 后端 (Java 17)
+└── frontend/               # [submodule] React 19 + Next.js 16 前端
 ```
 
 ## 禁止行为
